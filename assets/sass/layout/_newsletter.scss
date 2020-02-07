@@ -1,0 +1,14 @@
+.newsletter {
+  background-color: #ccc;
+  text-align: center;
+  padding: 2rem;
+}
+
+.newsletter__group {
+  display: inline-block;
+  margin: 0;
+  input {
+    height: 2rem;
+    border: none;
+  }
+}

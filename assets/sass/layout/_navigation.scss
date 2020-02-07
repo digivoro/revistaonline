@@ -1,23 +1,64 @@
 .menu {
-  width: 960px;
+  width: 100%;
   padding: 10px;
   border-bottom: 1px solid gray;
 }
 .menu__logo {
+  font-family: $coda;
   font-size: 24px;
   font-weight: bold;
   text-transform: uppercase;
-  display: inline-block;
 }
 .menu__nav {
+  position: absolute;
+  right: 6%;
+  top: 0;
+}
+
+.menu__nav li {
   display: inline-block;
-  width: 840px;
-  text-align: right;
+  list-style: none;
 }
 .menu__nav ul li a {
   text-decoration: none;
   text-transform: uppercase;
+  font-family: $nova;
+  font-size: 1rem;
+  color: black;
+  border-radius: 5px;
+  padding: 0.5rem;
 }
 .menu__input-menu {
+  font-family: $nova;
+  font-size: 1rem;
+  padding-left: 1rem;
+  border: 2px solid #666;
   border-radius: 30px;
+}
+
+.menu__nav ul li:hover > :not(input) {
+  background-color: black;
+  color: white;
+  transition: ease-in-out 0.5s;
+}
+
+@media (max-width: $md) {
+  .menu__nav {
+    width: 50%;
+
+    li {
+      width: 25%;
+    }
+  }
+  .menu__nav ul li a {
+    font-size: 0.8rem;
+  }
+  .menu__input-menu {
+    margin-left: 2rem;
+    width: 8rem;
+    font-size: 0.8rem;
+  }
+  .menu .menu__nav li:first-child {
+    display: none;
+  }
 }
